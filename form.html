@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" type="text/css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="f-box">
+            <form method="POST">
+                <table class="f-table">
+                    <tr>
+                        <th colspan="4">
+                            <h2>Kê khai y tế</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <p>ĐÂY LÀ TÀI LIỆU QUAN TRỌNG, THÔNG TIN CỦA ANH CHỊ SẼ GIÚP CƠ QUAN Y TẾ LIÊN LẠC KHI CẦN THIẾT ĐỂ PHÒNG CHỐNG DỊCH BỆNH TRUYỀN NHIỄM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <p class="danger">Khuyến cáo: khai báo thông tin sai là vi phạm pháp luật Việt Nam và có thể xử lý hình sự</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="CuaKhau">Cửa Khẩu (*)</label></td>
+                        <td>
+                            <select name="CuaKhau" id="CuaKhau">
+                        <option value="chon" selected hidden>Chọn</option>
+                        <option value="HCM">Tp.HCM</option>
+                        <option value="HN">Hà Nội</option>
+                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">HỌ TÊN(ghi chữ IN HOA)(*)</label></td>
+                        <td><input type="text" name="name" id="name" placeholder="Họ và tên"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="birth-year">Năm Sinh(*)</label>
+                        </td>
+                        <td>
+                            <input type="number" placeholder="YYYY" min="1960" max="2019">
+                        </td>
+                        <td>
+                            <label for="gender">Giới Tính(*)</label>
+                            <select name="gender" id="gender">
+                        <option selected hidden>Chọn</option>
+                        <option value="male">Nam</option>
+                        <option value="female">Nữ</option>
+                    </select>
+                        </td>
+                        <td>
+                            <label for="nation">Quốc tịch(*)</label>
+                            <select name="nation" id="nation">
+                        <option selected hidden>Chọn</option>
+                        <option value="vn">Việt Nam</option>
+                        <option value="others">Other</option>
+                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="CMND">Số hộ chiếu hoặc giấy thông hành hợp pháp khác(*)</label>
+                        </td>
+                        <td><input type="text" name="leave" id="leave" placeholder="Hộ chiếu hoặc thông hành"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="leave">Thông tin đi lại(*)</label></td>
+                        <td>
+                            <input type="radio" name="vehicles" value="plane" id="plane">
+                            <label for="plane">Máy bay</label>
+                            <input type="radio" name="vehicles" value="ship" id="ship">
+                            <label for="ship">Tàu thuyền</label>
+                            <input type="radio" name="vehicles" value="car" id="car">
+                            <label for="car">Ô tô</label>
+                            <input type="radio" name="vehicles" value="others" id="v-others">
+                            <label for="v-others">Khác</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <textarea name="leave" id="leave" cols="30" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="v-number">Số hiệu phương tiện</label>
+                        </td>
+                        <td><input type="text" name="v-number" id="v-number" placeholder="XX AB-XXXXX"></td>
+                        <td>
+                            <label for="chairs">Số ghế(nếu có)</label>
+                        </td>
+                        <td><input type="text" name="chairs" id="chairs" placeholder="XX-A"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Ngày khởi hành(*)</label>
+                        </td>
+                        <td>
+                            <select name="day" id="StartDay"></select>
+                            <select name="month" id="StartMonth"></select>
+                            <select name="year" id="StartYear"></select>
+                        </td>
+                        <td>
+                            <label>Ngày Nhập Cảnh(*)</label>
+                        </td>
+                        <td>
+                            <select name="day" id="NC-day"></select>
+                            <select name="month" id="NC-month"></select>
+                            <select name="year" id="NC-year"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Địa Điểm Khởi Hành (tỉnh Quốc gia )</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Quốc Gia(*)</label>
+                        </td>
+                        <td>
+                            <select name="nation" id="nationality">
+                                    <option selected hidden>Chọn</option>
+                                    <option value="vn">Việt Nam</option>
+                                    <option value="others">Other...</option>  
+                                </select>
+                        </td>
+                        <td>
+                            <label>Tỉnh(*)</label>
+                        </td>
+                        <td>
+                            <select name="tỉnh" id="tinh">
+                            <option selected hidden>chọn</option>
+                            <option value="hcm">Hồ Chí Minh</option>
+                            <option value="DN">Đà Nẵng</option>
+                            <option value="HN">Hà Nội</option>
+                            <option value="others">others...</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Địa Điểm Nơi Đến (tỉnh quốc gia)</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Quốc Gia(*)</label>
+                        </td>
+                        <td>
+                            <select name="nation" id="nationality">
+                                <option selected hidden>Chọn</option>
+                                <option value="vn">Việt Nam</option>
+                                <option value="others">Other...</option>  
+                            </select>
+                        </td>
+                        <td>
+                            <label>Tỉnh(*)</label>
+                        </td>
+                        <td>
+                            <select name="tinh" id="tinh">
+                        <option selected hidden>chọn</option>
+                        <option value="hcm">Hồ Chí Minh</option>
+                        <option value="DN">Đà Nẵng</option>
+                        <option value="HN">Hà Nội</option>
+                        <option value="others">others...</option>
+                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Trong Vòng 14 ngày qua, Anh chị có đến quốc gia/vùng/lãnh thổ nào không? (nếu có ghi rõ)</label>
+                        </td>
+                        <td></td>
+                        <td>
+                            <input type="text" id="note" name="note" placeholder="Quốc gia - lãnh thổ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <input type="submit" value="Gửi" onclick="alert('CẢM ƠN BẠN ĐÃ HỢP TÁC VỚI CHÍNH PHỦ...!!!')">
+                        </th>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script>
+        var startDay = document.getElementById('StartDay');
+        var startMonth = document.getElementById('StartMonth');
+        var startYear = document.getElementById('StartYear');
+        var ncDay = document.getElementById('NC-day');
+        var ncMonth = document.getElementById('NC-month');
+        var ncYear = document.getElementById('NC-year');
+
+        startDay.innerHTML = Day();
+        startMonth.innerHTML = Month();
+        startYear.innerHTML = Year();
+
+        ncDay.innerHTML = Day();
+        ncMonth.innerHTML = Month();
+        ncYear.innerHTML = Year();
+
+        function Year() {
+            var date = new Date();
+            var year = '<option selected hidden>Năm</option>'
+            for (var i = 1960; i <= date.getFullYear(); i++) {
+                year += `<option value="${i}">${i}</option>`
+            }
+            return year;
+        }
+
+        function Month() {
+            var month = '<option selected hidden>Tháng</option>'
+            for (var i = 1; i <= 12; i++) {
+                month += `<option value="${i}">${i}</option>`
+            }
+            return month;
+        }
+
+        function Day() {
+            var day = '<option selected hidden>Ngày</option>'
+            for (var i = 1; i <= 31; i++) {
+                day += `<option value="${i}">${i}</option>`
+            }
+            return day;
+        }
+    </script>
+</body>
+
+</html>
